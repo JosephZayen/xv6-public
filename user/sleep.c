@@ -1,9 +1,15 @@
-#include "./user.h"
+#include "user/user.h"
 
-main(int argc, char *argv[]){
-    if(argc < 2) printf('Usage: sleep ticks'); exit(1);
+int main(int argc, char *argv[]){
+    if(argc < 2){
+        printf('Usage: sleep ticks'); 
+        exit(1);
+    }
     int ticks = atoi(argv[1]);
-    if(ticks < 0) printf('sleep: invalid number %s\n', argv[1]); exit(1);
+    if(ticks < 0){ 
+        printf('sleep: invalid number %s\n', argv[1]); 
+        exit(1);
+    }
     sleep(ticks);
     exit(0);
 }
