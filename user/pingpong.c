@@ -15,12 +15,12 @@ int main(int argc, char *argv[]){
         close(ping[0]);
         wait(0);
         read(pong[0], &pong_recv, 1);
-        printf("%d: received pong", getpid());
+        printf("%d: received pong\n", getpid());
     }else{
         char ping_recv;
         char pong_send = 'i';
         read(ping[0], &ping_recv, 1);
-        printf("%d: received ping", getpid());
+        printf("%d: received ping\n", getpid());
         write(pong[1], &pong_send, 1);
         close(pong[0]);
         close(pong[1]);
