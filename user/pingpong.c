@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
         close(ping[0]);
         wait(0);
         read(pong[0], &pong_recv, 1);
-        printf("%d: received pong", getpid())
+        printf("%d: received pong", getpid());
     }else{
         char ping_recv;
         char pong_send = 'i';
